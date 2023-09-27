@@ -8,7 +8,7 @@ const Banner = () => {
         AOS.init();
       }, [])
     return (
-        <div className='bg-[#BAD7E9] flex items-center gap-20 '>
+        <div className='bg-gray-200 flex items-center gap-20 '>
             {/* Main image of the banner */}
             <img className='ml-20 mt-auto' src="/bannerP.png" alt="" />
             {/* Right portion of the banner */}
