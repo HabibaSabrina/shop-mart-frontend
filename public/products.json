@@ -1,0 +1,80 @@
+[
+    {
+      "id": 1,
+      "product_name": "Smartphone",
+      "image": "/slider/phone.png",
+      "price": 599.99,
+      "product_group": "Electronic Item"
+    },
+    {
+      "id": 2,
+      "product_name": "Dining Table",
+      "image": "/slider/dining.png",
+      "price": 349.99,
+      "product_group": "Home Furniture"
+    },
+    {
+      "id": 3,
+      "product_name": "Men's T-Shirt",
+      "image": "/slider/tshirt.png",
+      "price": 29.99,
+      "product_group": "Fashion Wear"
+    },
+    {
+      "id": 4,
+      "product_name": "Diamond Necklace",
+      "image": "/slider/necklace.png",
+      "price": 1999.99,
+      "product_group": "Jewelry and Watches"
+    },
+    {
+      "id": 5,
+      "product_name": "Board Game",
+      "image": "/slider/chess.png",
+      "price": 24.99,
+      "product_group": "Toys and Games"
+    },
+    {
+      "id": 6,
+      "product_name": "Laptop",
+      "image": "/slider/laptop.png",
+      "price": 999.99,
+      "product_group": "Electronic Item"
+    },
+    {
+      "id": 7,
+      "product_name": "Sofa",
+      "image": "./slider/SOFA.png",
+      "price": 799.99,
+      "product_group": "Home Furniture"
+    },
+    {
+      "id": 8,
+      "product_name": "Women's Dress",
+      "image": "./slider/girldress.png",
+      "price": 49.99,
+      "product_group": "Fashion Wear"
+    },
+    {
+      "id": 9,
+      "product_name": "Luxury Watch",
+      "image": "./slider/watch.png",
+      "price": 2999.99,
+      "product_group": "Jewelry and Watches"
+    },
+    {
+      "id": 10,
+      "product_name": "Action Figure",
+      "image": "./slider/action.png",
+      "price": 12.99,
+      "product_group": "Toys and Games"
+    },
+    {
+      "id": 11,
+      "product_name": "Desk Chair",
+      "image": "./slider/chair.png",
+      "price": 79.99,
+      "product_group": "Office Supplies"
+    }
+  ]
+  

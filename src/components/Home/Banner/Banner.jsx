@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import "./style.css"
 const Banner = () => {
     useEffect(() => {
         AOS.init();
       }, [])
     return (
-        <div className='bg-gray-200 flex items-center gap-20 '>
+        <div className='banner-bg flex items-center gap-20 '>
             {/* Main image of the banner */}
             <img className='ml-20 mt-auto' src="/bannerP.png" alt="" />
             {/* Right portion of the banner */}
