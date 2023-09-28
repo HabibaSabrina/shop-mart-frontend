@@ -24,7 +24,8 @@ const router = createBrowserRouter([
         path:"/productcart",
         element:<ProductCart></ProductCart>,
         loader: addedProductsCart
-      }
+      },
+      
     ]
   },
 ]);
