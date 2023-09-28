@@ -7,11 +7,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home/Home.jsx';
+import Main from './Layout/Main.jsx';
+import ProductCart from './components/ProductCart/ProductCart.jsx';
+import { addedProductsCart } from './loader/getAddedProducts.js';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Main></Main>,
+    children:[
+      {
+        path:"/",
+        element:<Home></Home>
+      },
+      {
+        path:"/productcart",
+        element:<ProductCart></ProductCart>,
+        loader: addedProductsCart
+      }
+    ]
   },
 ]);
 
