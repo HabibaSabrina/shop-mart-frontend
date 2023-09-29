@@ -1,3 +1,4 @@
+//adding cart data to the localstorage
 const addToDb = id => {
     let productCart = getStoredCart()
     const checking = productCart[id]

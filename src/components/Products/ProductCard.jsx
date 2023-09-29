@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FaCartArrowDown, FaShoppingBag } from 'react-icons/fa';
 import '@smastrom/react-rating/style.css'
 import { addToDb } from '../../utilities/fakeDb';
+import { Link } from 'react-router-dom';
 const ProductCard = ({product}) => {
     const {id, product_name, image, price, product_group} = product
     const [isHovered, setIsHovered] = useState(false);
@@ -26,7 +27,7 @@ const ProductCard = ({product}) => {
             {
                isHovered? <div className='relative'>
                 <img className='opacity-20' src={image} alt=""  />
-                <button className='border-2  rounded-xl bg-[#EB455F] absolute top-32 left-20 p-3 px-5 font-semibold text-white '>View Details</button>
+                <Link to={`/product/${id}`}><button className=' bg-[#EB455F] absolute top-32 left-20 p-3 px-5 font-semibold text-white '>View Details</button></Link>
                </div> : <img className='p-5' src={image} alt=""  />
             }
             </div>
@@ -46,7 +47,7 @@ const ProductCard = ({product}) => {
             {/* card buttons */}
             <div>
                 <button onClick={() => handleProductCart(id)} className='flex items-center gap-3 font-semibold bg-[#EB455F] w-full justify-center py-3 text-white'>Add to Cart <FaCartArrowDown className='text-xl'></FaCartArrowDown></button>
-                <button className='flex items-center gap-3 font-semibold bg-[#2B3467] w-full justify-center py-3 text-white'>Buy <FaShoppingBag className='text-xl'></FaShoppingBag></button>
+                <Link to={`/payment/${id}`}><button className='flex items-center gap-3 font-semibold bg-[#2B3467] w-full justify-center py-3 text-white'>Buy <FaShoppingBag className='text-xl'></FaShoppingBag></button></Link>
             </div>
         </div>
     );

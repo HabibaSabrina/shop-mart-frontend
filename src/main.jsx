@@ -10,6 +10,9 @@ import Home from './components/Home/Home.jsx';
 import Main from './Layout/Main.jsx';
 import ProductCart from './components/ProductCart/ProductCart.jsx';
 import { addedProductsCart } from './loader/getAddedProducts.js';
+import Payment from './components/Payment/Payment.jsx';
+import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
+import PaymentHistory from './components/Payment/PaymentHistory/PaymentHistory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,19 @@ const router = createBrowserRouter([
         element:<ProductCart></ProductCart>,
         loader: addedProductsCart
       },
+      {
+        path:"/product/:id",
+        element:<ProductDetail></ProductDetail>,
+        loader:() => fetch(`/products.json`)
+      },
+      {
+        path:"/payment/:id",
+        element:<Payment></Payment>
+      },
+      {
+        path:"/history",
+        element:<PaymentHistory></PaymentHistory>
+      }
       
     ]
   },

@@ -2,8 +2,9 @@ import React from 'react';
 import { FaTrash } from 'react-icons/fa';
 
 const ProductCartRow = ({ theProduct }) => {
-    const { product_name, image, price, product_group, quantity } = theProduct
+    const { product_name, image, price, quantity } = theProduct
     return (
+        // Row of the cart product
         <div className='flex items-center my-10 rounded-xl shadow-xl shadow-[#757b9f] justify-between border-2 p-2 bg-white'>
             <div className='flex gap-10 items-center p-3'>
                 <div>
