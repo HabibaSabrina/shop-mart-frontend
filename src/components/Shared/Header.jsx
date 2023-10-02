@@ -1,45 +1,75 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCartArrowDown, FaSearch, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    const [search, setSearch] = useState(false)
-    const handleClick = () => {
-        if(search){
-            setSearch(false)
-            console.log(search)
-        }
-        else{
-            setSearch(true)
-            console.log(search)
-        }
-        // setSearch((prevIsClicked) => !prevIsClicked);
-      };
-    
+    const [mouse, setMouse] = useState(0)
+    const [pos, setPos] = useState("top")
+    useEffect (()=>{
+        document.addEventListener("scroll", e => {
+            let scrolled = document.scrollingElement.scrollTop;
+            if (scrolled >= 5){
+               setPos("moved")
+            } else {
+               setPos("top")
+            }
+        })
+    },[])
+    const mouseEnter = id => {
+        setMouse(id)
+
+    }
+    const mouseLeave = () => {
+        setMouse(0)
+    }
+
     return (
         // header of the website
-        <div className='flex items-center justify-between p-5 bg-[#090933] text-white h-16 font-semibold bg-opacity-80 fixed w-full z-30'>
-            <div className='flex'>
-                <Link to="/"><p className='border-b-2 hover:translate-x-1 duration-500 transform  hover:w-24 text-center mx-5 border-white'>Home</p></Link>
+        <div className={`flex items-center justify-between p-5 ${pos == "top" || 'bg-opacity-90 duration-1000'} bg-[#2B3467] shadow text-white duration-1000 h-16 font-semibold fixed w-full z-30`}>
+            <div className='flex gap-10'>
+
+                <div className={`relative mx-auto duration-700`}>
+                    <Link to="/"><p onMouseEnter={() => mouseEnter(1)} onMouseLeave={() => mouseLeave()} className='text-center'>Home</p></Link>
+                    <div className={`border  absolute ${mouse == 1 ? 'w-full duration-1000 border-white' : 'w-0 border-transparent duration-700'}`}></div>
+
+                </div>
+                <div className={`relative mx-auto duration-700`}>
+                    <Link to="/"><p onMouseEnter={() => mouseEnter(2)} onMouseLeave={() => mouseLeave()} className='text-center'>Product</p></Link>
+                    <div className={`border  absolute ${mouse == 2 ? 'w-full duration-1000 border-white' : 'w-0 border-transparent duration-700'}`}></div>
+
+                </div>
+                <div className={`relative mx-auto duration-700`}>
+                    <Link to="/payment"><p onMouseEnter={() => mouseEnter(3)} onMouseLeave={() => mouseLeave()} className='text-center'>Payment</p></Link>
+                    <div className={`border  absolute ${mouse == 3 ? 'w-full duration-1000 border-white' : 'w-0 border-transparent duration-700'}`}></div>
+
+                </div>
+                <div className={`relative mx-auto duration-700`}>
+                    <Link to="/history"><p onMouseEnter={() => mouseEnter(4)} onMouseLeave={() => mouseLeave()} className='text-center'>Payment History</p></Link>
+                    <div className={`border  absolute ${mouse == 4 ? 'w-full duration-1000 border-white' : 'w-0 border-transparent duration-700'}`}></div>
+
+                </div>
+
                 
-                
-                <p className='border-b-2 hover:translate-x-1 duration-500 transform  hover:w-24 text-center mx-5 border-white'>Product</p>
-                <Link to="/history"><p className=' hover:translate-x-1 duration-500 transform  hover:w-40 text-center mx-5 border-b-2 border-white'>Payment History</p></Link>
+
             </div>
             <div className='flex items-center gap-5'>
-            {
-                search && <form action="">
-                <input className='px-3 p-1 font-normal text-black w-64' type="text" name="" id="" placeholder='Search Text' />
-                {/* <button className='-ml-6 z-10 text-[#2B3467] bg-white' ><FaSearch></FaSearch></button> */}
-                
-                
-            </form>
-            }
-                <button onClick={handleClick} className='text-white text-xl' ><FaSearch></FaSearch></button>
+                <button onClick={() => document.getElementById('my_modal_2').showModal()} className='text-white text-xl' ><FaSearch></FaSearch></button>
                 <Link to="/productcart"><p><FaCartArrowDown className='text-xl'></FaCartArrowDown></p></Link>
                 <p><FaUser className='text-xl'></FaUser></p>
-                
+
             </div>
+            {/* modal for the search */}
+            <dialog id="my_modal_2" className="modal bg-black bg-opacity-50">
+                <div className="modal-box rounded-none bg-gray-50">
+                    <form className='flex bg-white' action="">
+                        <input className='border-2 focus:outline-none p-2 w-full text-black font-normal' type="text" placeholder='Search Text' />
+                        <button className='bg-[#EB455F] text-xl p-3'><FaSearch></FaSearch></button>
+                    </form>
+                </div>
+                <form method="dialog" className="modal-backdrop">
+                    <button>close</button>
+                </form>
+            </dialog>
         </div>
     );
 };

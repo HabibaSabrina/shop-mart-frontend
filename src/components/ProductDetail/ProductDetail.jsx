@@ -16,8 +16,8 @@ const ProductDetail = () => {
             <Link to="/"><button className='font-semibold bg-[#2B3467] rounded-full px-3 hover:bg-slate-600 text-white text-xl p-1 absolute md:right-60 md:top-28 top-5 right-5'>X</button></Link>
             {/* Product Detail Card */}
             <div className='md:grid grid-cols-3 r gap-20 bg-transparent shadow-2xl rounded-xl p-10'>
-                <div className='text-center md:my-10 md:border-r-2  md:pr-10'>
-                    <img className='w-96 mt-5 mx-auto border-4 border-[#2B3467]' src={image} alt="" />
+                <div className='text-center md:my-10 md:border-4  md:pr-10'>
+                    <img className='w-96 mt-5 mx-auto' src={image} alt="" />
                     <p className='text-2xl font-semibold text-[#2B3467] my-5'>{product_name}</p>
                 </div>
                 <div className='col-span-2 text-gray-600'>
