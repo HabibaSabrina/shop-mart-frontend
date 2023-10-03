@@ -36,6 +36,15 @@ const Header = () => {
                 <div className={`relative mx-auto duration-700`}>
                     <Link to="/"><p onMouseEnter={() => mouseEnter(2)} onMouseLeave={() => mouseLeave()} className='text-center'>Product</p></Link>
                     <div className={`border  absolute ${mouse == 2 ? 'w-full duration-1000 border-white' : 'w-0 border-transparent duration-700'}`}></div>
+                    {
+                        mouse ==2 && <div onMouseEnter={() => mouseEnter(2)} onMouseLeave={() => mouseLeave()} className='absolute w-40 bg-[#2B3467] pt-4 top-7'>
+                        <div className='py-2 px-3 hover:bg-black hover:bg-opacity-30 cursor-pointer duration-300'><p>Electronic Items</p>
+                        </div>
+                        <p className='py-2 px-3 hover:bg-black hover:bg-opacity-30 cursor-pointer duration-300'>Fashion Wear</p>
+                        <p className='py-2 px-3 hover:bg-black hover:bg-opacity-30 cursor-pointer duration-300'>Toys and games</p>
+                    </div>
+                    }
+                    
 
                 </div>
                 <div className={`relative mx-auto duration-700`}>
@@ -71,6 +80,7 @@ const Header = () => {
                 </form>
             </dialog>
         </div>
+        
     );
 };
 

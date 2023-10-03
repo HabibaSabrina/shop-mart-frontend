@@ -17,6 +17,7 @@ import CheckoutForm from './components/Payment/CheckoutForm/CheckoutForm.jsx';
 import Login from './components/Login/Login.jsx';
 import Dashboard from './Layout/Dashboard.jsx';
 import User from './components/Dashboard/User/User.jsx';
+import Products from './components/Products/Products.jsx';
 
 
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/product',
+        element:<Products></Products>
       }
       
     ]
