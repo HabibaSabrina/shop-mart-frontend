@@ -15,6 +15,8 @@ import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
 import PaymentHistory from './components/Payment/PaymentHistory/PaymentHistory.jsx';
 import CheckoutForm from './components/Payment/CheckoutForm/CheckoutForm.jsx';
 import Login from './components/Login/Login.jsx';
+import Dashboard from './Layout/Dashboard.jsx';
+import User from './components/Dashboard/User/User.jsx';
 
 
 
@@ -52,6 +54,16 @@ const router = createBrowserRouter([
       
     ]
   },
+  {
+    path:'dashboard',
+    element:<Dashboard></Dashboard>,
+    children:[
+      {
+        path:'user',
+        element:<User></User>
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -40,7 +40,7 @@ const Banner = () => {
             image: '/public/banner/supplies.jpg',
             name: 'Office Supplies'
         },
-        
+
     ]
     const slideInterval = 2000;
     const nextSlide = () => {
@@ -59,7 +59,7 @@ const Banner = () => {
         };
     });
 
-    
+
     const visibleSlides = products.slice(currentIndex, currentIndex + itemsPerPage);
     useEffect(() => {
         AOS.init();
@@ -73,14 +73,14 @@ const Banner = () => {
                 <BannerInfo></BannerInfo>
                 {/* banner cards */}
                 <div className=' w-full m-auto py-10 px-4 relative group'>
-                    <div className=' flex gap-5 duration-500'>
+                    <div className=' flex gap-5 duration-500' >
                         {
-                            visibleSlides.map(slide => <BannerCard key={slide.id} slide={slide}  currentIndex={currentIndex} itemsPerPage={itemsPerPage}></BannerCard>)
+                            visibleSlides.map(slide => <BannerCard key={slide.id} slide={slide} currentIndex={currentIndex} itemsPerPage={itemsPerPage}></BannerCard>)
                         }
                     </div>
-                    
+
                 </div>
-               
+
 
             </div>
 
