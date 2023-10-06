@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./style.css"
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import BannerCard from './BannerCard';
 import BannerInfo from './BannerInfo';
+import Marquee from 'react-fast-marquee';
+import '../../Products/style.css'
 const Banner = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = 3;
+    
     const products = [
         {
             id: 1,
@@ -42,42 +42,24 @@ const Banner = () => {
         },
 
     ]
-    const slideInterval = 2000;
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex + itemsPerPage < products.length ? prevIndex + itemsPerPage - 2 : 0
-        );
-    };
-    // Automatic sliding logic
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            nextSlide();
-        }, slideInterval);
-
-        return () => {
-            clearInterval(intervalId); // Clean up the interval when the component unmounts
-        };
-    });
-
-
-    const visibleSlides = products.slice(currentIndex, currentIndex + itemsPerPage);
+   
     useEffect(() => {
         AOS.init();
     }, [])
     return (
-        <div className=' bg-gradient-to-l from-[#2B3467] to-gray-300 flex items-center gap-20 '>
+        <div className=' bg-gradient-to-b from-[#2B3467] to-gray-300 flex items-center gap-20 '>
             {/* Main image of the banner */}
-            <img className='ml-20 mt-auto' src="/bannerP.png" alt="" />
+            <img className='ml-20 mt-auto' src="/banner/bannerP.png" alt="" />
             {/* Right portion of the banner */}
             <div className=' p-10 pt-20' data-aos="fade-left" data-aos-duration={1000}>
                 <BannerInfo></BannerInfo>
                 {/* banner cards */}
-                <div className=' w-full m-auto py-10 px-4 relative group'>
-                    <div className=' flex gap-5 duration-500' >
+                <div className='w-[750px] mt-10 mx-auto'>
+                    <Marquee pauseOnHover={true} speed={60}>
                         {
-                            visibleSlides.map(slide => <BannerCard key={slide.id} slide={slide} currentIndex={currentIndex} itemsPerPage={itemsPerPage}></BannerCard>)
+                            products.map(slide => <BannerCard key={slide.id} slide={slide}></BannerCard>)
                         }
-                    </div>
+                    </Marquee>
 
                 </div>
 

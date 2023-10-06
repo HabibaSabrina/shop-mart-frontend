@@ -1,12 +1,12 @@
 import React from 'react';
 
-const BannerCard = ({slide, currentIndex, itemsPerPage}) => {
+const BannerCard = ({slide}) => {
    
     return (
-        <div className='flex duration-500 '
+        <div className='mx-5 duration-500 '
         >
             <div className='bg-white p-3 h-full '>
-                    <img className='w-96 duration-200' src={slide.image} alt="" />
+                    <img className='w-48 duration-200' src={slide.image} alt="" />
                     <p className='my-3 font-semibold text-blue-900 text-center'>{slide.name}</p>
                 </div>
         </div>

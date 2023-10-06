@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaShoppingBag } from 'react-icons/fa';
 import PersonalInfo from './PersonalInfo';
 import BillingAddress from './BillingAddress';
 import OrderSummary from './OrderSummary';

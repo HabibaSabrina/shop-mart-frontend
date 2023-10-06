@@ -1,0 +1,471 @@
+[
+  {
+    "id": 1,
+    "product_name": "Smartphone",
+    "image": "/slider/phone.png",
+    "price": 599.99,
+    "product_group": "Electronic Item",
+    "description": "Stay connected with the latest smartphone featuring a high-resolution display, powerful processor, and long-lasting battery life.",
+    "rating": 4,
+    "totalsold": 20,
+    "detailed_description": "The latest smartphone model is packed with cutting-edge technology. Its high-resolution display provides vibrant and sharp visuals, making your content come to life. The powerful processor ensures smooth multitasking, and the long-lasting battery keeps you connected all day long. Discover a world of possibilities with this smartphone.",
+    "specifications": {
+      "Display": "6.5-inch Super AMOLED",
+      "Processor": "Octa-core Snapdragon 865",
+      "Battery Life": "Up to 24 hours of talk time",
+      "Storage": "128GB internal storage",
+      "Camera": "Triple-lens rear camera (48MP+12MP+8MP)"
+    },
+    "reviews": [
+      {
+        "person_name": "John Smith",
+        "person_image": "/user/girl.jpg",
+        "rating": 5,
+        "review_text": "I love this smartphone! The camera quality is amazing, and it's super fast."
+      },
+      {
+        "person_name": "Emily Davis",
+        "person_image": "/user/user1.jpg",
+        "rating": 4,
+        "review_text": "Great value for the price. The battery life is impressive."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex_code": "#000000"
+      },
+      {
+        "name": "Silver",
+        "hex_code": "#C0C0C0"
+      },
+      {
+        "name": "Blue",
+        "hex_code": "#0000FF"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "product_name": "Dining Table",
+    "image": "/slider/dining.png",
+    "price": 349.99,
+    "product_group": "Home Furniture",
+    "description": "Gather your family and friends around this stylish dining table for memorable meals and gatherings.",
+    "rating": 5,
+    "totalsold": 30,
+    "detailed_description": "Upgrade your dining experience with this elegant dining table. Its stylish design adds a touch of sophistication to your home decor, making it perfect for family gatherings and special occasions. Crafted with high-quality materials, it's built to last and withstand the test of time.",
+    "specifications": {
+      "Material": "Solid oak wood",
+      "Dimensions": "72\" x 36\" x 30\"",
+      "Seating Capacity": "Seats 6 people"
+    },
+    "reviews": [
+      {
+        "person_name": "Sarah Johnson",
+        "person_image": "/user/user1.jpg",
+        "rating": 5,
+        "review_text": "This dining table exceeded my expectations. It's sturdy and beautiful."
+      },
+      {
+        "person_name": "Michael Thompson",
+        "person_image": "/user/user5.jpg",
+        "rating": 4,
+        "review_text": "Great addition to our dining room. Fits perfectly and looks amazing."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Oak",
+        "hex_code": "#8B4513"
+      },
+      {
+        "name": "Walnut",
+        "hex_code": "#654321"
+      },
+      {
+        "name": "Espresso",
+        "hex_code": "#2D383A"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "product_name": "Men's T-Shirt",
+    "image": "/slider/tshirt.png",
+    "price": 29.99,
+    "product_group": "Fashion Wear",
+    "description": "Upgrade your wardrobe with this comfortable and fashionable men's t-shirt available in various colors.",
+    "rating": 3,
+    "totalsold": 10,
+    "detailed_description": "Elevate your style with this classic men's t-shirt. Crafted from soft and breathable fabric, it offers exceptional comfort all day long. The versatile design makes it suitable for both casual and semi-formal occasions, and it comes in a variety of colors to suit your preferences.",
+    "specifications": {
+      "Material": "Cotton blend",
+      "Sizes": "Available in S, M, L, XL",
+      "Neckline": "Crew neck",
+      "Fit": "Regular fit"
+    },
+    "reviews": [
+      {
+        "person_name": "David Brown",
+        "person_image": "/user/user2.jpg",
+        "rating": 3,
+        "review_text": "Decent t-shirt, but I expected better quality for the price."
+      },
+      {
+        "person_name": "Maria Garcia",
+        "person_image": "/user/girl.jpg",
+        "rating": 4,
+        "review_text": "Comfortable and looks good. I'm satisfied with my purchase."
+      }
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "hex_code": "#FFFFFF"
+      },
+      {
+        "name": "Black",
+        "hex_code": "#000000"
+      },
+      {
+        "name": "Navy",
+        "hex_code": "#000080"
+      },
+      {
+        "name": "Gray",
+        "hex_code": "#808080"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "product_name": "Diamond Necklace",
+    "image": "/slider/necklace.png",
+    "price": 1999.99,
+    "product_group": "Jewelry and Watches",
+    "description": "Adorn yourself with elegance and luxury with this exquisite diamond necklace.",
+    "rating": 2,
+    "totalsold": 5,
+    "detailed_description": "Indulge in the luxury of this exquisite diamond necklace. Each diamond is carefully selected and set to perfection, creating a timeless piece that adds unparalleled elegance to any occasion. It's the ultimate expression of your style and sophistication.",
+    "specifications": {
+      "Material": "18K White Gold",
+      "Diamonds": "Round brilliant-cut diamonds (Total carat weight: 2.5 ct)",
+      "Chain Length": "18 inches"
+    },
+    "reviews": [
+      {
+        "person_name": "Sophia Miller",
+        "person_image": "/user/user3.jpg",
+        "rating": 2,
+        "review_text": "Overpriced for what you get. I expected better quality."
+      },
+      {
+        "person_name": "Daniel Wilson",
+        "person_image": "/user/girl.jpg",
+        "rating": 3,
+        "review_text": "It's a beautiful necklace, but I expected more sparkle."
+      }
+    ],
+    "colors": [
+      {
+        "name": "White Gold",
+        "hex_code": "#F5F5F5"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "product_name": "Board Game",
+    "image": "/slider/chess.png",
+    "price": 24.99,
+    "product_group": "Toys and Games",
+    "description": "Enjoy hours of fun and strategy with this classic board game suitable for the whole family.",
+    "rating": 4,
+    "totalsold": 30,
+    "detailed_description": "Gather your family and friends for hours of entertainment with this classic board game. It's perfect for fostering strategic thinking and friendly competition. Whether you're a beginner or a seasoned player, this game promises endless fun and memorable moments.",
+    "specifications": {
+      "Game Type": "Strategy board game",
+      "Players": "2 players",
+      "Ages": "Recommended for ages 8 and up",
+      "Includes": "Game board, pieces, and instructions"
+    },
+    "reviews": [
+      {
+        "person_name": "Linda Evans",
+        "person_image": "/user/user4.jpg",
+        "rating": 5,
+        "review_text": "This board game is a blast! We play it every weekend."
+      },
+      {
+        "person_name": "James Lee",
+        "person_image": "/user/girl.jpg",
+        "rating": 4,
+        "review_text": "Great quality and a must-have for family game night."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Classic",
+        "hex_code": "#000000"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "product_name": "Laptop",
+    "image": "/slider/laptop.png",
+    "price": 999.99,
+    "product_group": "Electronic Item",
+    "description": "Boost your productivity with a high-performance laptop designed for work and entertainment.",
+    "rating": 5,
+    "totalsold": 40,
+    "detailed_description": "Elevate your computing experience with this high-performance laptop. It's designed to handle all your work and entertainment needs with ease. Whether you're a professional or a student, this laptop offers power and versatility in a sleek and portable package.",
+    "specifications": {
+      "Processor": "Intel Core i7-11th Gen",
+      "Memory": "16GB RAM, 512GB SSD",
+      "Display": "15.6-inch Full HD IPS",
+      "Battery Life": "Up to 10 hours"
+    },
+    "reviews": [
+      {
+        "person_name": "Alex Thompson",
+        "person_image": "/user/user5.jpg",
+        "rating": 5,
+        "review_text": "This laptop is a game-changer for my productivity. Fast and reliable!"
+      },
+      {
+        "person_name": "Olivia Harris",
+        "person_image": "/user/user2.jpg",
+        "rating": 4,
+        "review_text": "Impressive performance and great value for the price."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Silver",
+        "hex_code": "#C0C0C0"
+      },
+      {
+        "name": "Black",
+        "hex_code": "#000000"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "product_name": "Sofa",
+    "image": "/slider/SOFA.png",
+    "price": 799.99,
+    "product_group": "Home Furniture",
+    "description": "Relax in style and comfort with this plush sofa that adds a touch of elegance to your living room.",
+    "rating": 3,
+    "totalsold": 15,
+    "detailed_description": "Transform your living room into a cozy haven with this plush sofa. Its ergonomic design ensures maximum comfort while its elegant style enhances the aesthetic of your space. Whether you're unwinding after a long day or entertaining guests, this sofa is the perfect addition to your home.",
+    "specifications": {
+      "Material": "High-quality fabric upholstery",
+      "Dimensions": "84\" x 36\" x 34\"",
+      "Seating Capacity": "Seats 3 people"
+    },
+    "reviews": [
+      {
+        "person_name": "William Johnson",
+        "person_image": "/user/girl.jpg",
+        "rating": 3,
+        "review_text": "The sofa is comfy, but the fabric attracts pet hair easily."
+      },
+      {
+        "person_name": "Mia Martinez",
+        "person_image": "/user/user1.jpg",
+        "rating": 4,
+        "review_text": "Looks great in my living room. It's a good buy."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Gray",
+        "hex_code": "#808080"
+      },
+      {
+        "name": "Beige",
+        "hex_code": "#F5F5DC"
+      },
+      {
+        "name": "Navy",
+        "hex_code": "#000080"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "product_name": "Women's Dress",
+    "image": "/slider/girldress.png",
+    "price": 49.99,
+    "product_group": "Fashion Wear",
+    "description": "Dress to impress with this chic women's dress, perfect for any special occasion.",
+    "rating": 4,
+    "totalsold": 28,
+    "detailed_description": "Make a stunning entrance at any special occasion with this chic women's dress. Its flattering design and elegant details are sure to turn heads. Whether you're attending a wedding or a formal event, this dress is your go-to choice for sophistication and style.",
+    "specifications": {
+      "Material": "Polyester blend",
+      "Sizes": "Available in XS, S, M, L",
+      "Neckline": "V-neck",
+      "Fit": "Slim fit"
+    },
+    "reviews": [
+      {
+        "person_name": "Ava Wilson",
+        "person_image": "/user/girl.jpg",
+        "rating": 4,
+        "review_text": "This dress is gorgeous and fits perfectly. I received many compliments."
+      },
+      {
+        "person_name": "Ethan Davis",
+        "person_image": "/user/user5.jpg",
+        "rating": 5,
+        "review_text": "Absolutely stunning! I felt like a princess in this dress."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Red",
+        "hex_code": "#FF0000"
+      },
+      {
+        "name": "Black",
+        "hex_code": "#000000"
+      },
+      {
+        "name": "Navy",
+        "hex_code": "#000080"
+      },
+      {
+        "name": "Burgundy",
+        "hex_code": "#800020"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "product_name": "Luxury Watch",
+    "image": "/slider/watch.png",
+    "price": 2999.99,
+    "product_group": "Jewelry and Watches",
+    "description": "Enhance your style with this premium luxury watch featuring impeccable craftsmanship and timeless design.",
+    "rating": 2,
+    "totalsold": 13,
+    "detailed_description": "Elevate your style with this exquisite luxury watch. It's a masterpiece of impeccable craftsmanship, featuring precision movement and a timeless design that exudes sophistication. Whether you're dressing up for a special occasion or showcasing your style every day, this watch is the epitome of elegance.",
+    "specifications": {
+      "Movement": "Swiss automatic movement",
+      "Case Material": "18K Rose Gold",
+      "Dial": "Sapphire crystal with diamond hour markers",
+      "Water Resistance": "50 meters"
+    },
+    "reviews": [
+      {
+        "person_name": "Oliver Johnson",
+        "person_image": "/user/user1.jpg",
+        "rating": 2,
+        "review_text": "Overpriced for what you get. I expected better quality."
+      },
+      {
+        "person_name": "Sophie Adams",
+        "person_image": "/user/user3.jpg",
+        "rating": 3,
+        "review_text": "It's a beautiful watch, but the price is steep."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Rose Gold",
+        "hex_code": "#B76E79"
+      },
+      {
+        "name": "Silver",
+        "hex_code": "#C0C0C0"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "product_name": "Action Figure",
+    "image": "/slider/action.png",
+    "price": 12.99,
+    "product_group": "Toys and Games",
+    "description": "Collect and play with your favorite action figure, perfect for imaginative adventures.",
+    "rating": 4,
+    "totalsold": 26,
+    "detailed_description": "Fuel your imagination with this action-packed action figure. Whether you're a collector or love imaginative play, this figure is a must-have. It's crafted with attention to detail and is ready for epic adventures in your hands.",
+    "specifications": {
+      "Character": "Superhero",
+      "Material": "Durable plastic",
+      "Height": "6 inches",
+      "Accessories": "Includes a weapon and a stand"
+    },
+    "reviews": [
+      {
+        "person_name": "Henry Adams",
+        "person_image": "/user/user5.jpg",
+        "rating": 4,
+        "review_text": "Great action figure for the price. My kids love it!"
+      },
+      {
+        "person_name": "Sophia Wilson",
+        "person_image": "/user/user1.jpg",
+        "rating": 5,
+        "review_text": "As a collector, I'm impressed with the quality and detail."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Superhero",
+        "hex_code": "#FFD700"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "product_name": "Desk Chair",
+    "image": "/slider/chair.png",
+    "price": 79.99,
+    "product_group": "Office Supplies",
+    "description": "Stay comfortable and productive with this ergonomic desk chair, ideal for home or office use.",
+    "rating": 5,
+    "totalsold": 32,
+    "detailed_description": "Enhance your work or study space with this ergonomic desk chair. Its comfortable design supports your posture and productivity, whether you're working from home or in the office. Invest in your comfort and well-being with this high-quality chair.",
+    "specifications": {
+      "Material": "Breathable mesh fabric",
+      "Adjustability": "Height and recline adjustments",
+      "Weight Capacity": "Up to 250 lbs",
+      "Swivel": "360-degree swivel"
+    },
+    "reviews": [
+      {
+        "person_name": "Ella Moore",
+        "person_image": "/user/girl.jpg",
+        "rating": 5,
+        "review_text": "This chair is a game-changer for my home office. Comfortable and well-made."
+      },
+      {
+        "person_name": "James Clark",
+        "person_image": "/user/user3.jpg",
+        "rating": 4,
+        "review_text": "Great chair for the price. Easy to assemble and comfortable to sit in."
+      }
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "hex_code": "#000000"
+      },
+      {
+        "name": "Gray",
+        "hex_code": "#808080"
+      },
+      {
+        "name": "Blue",
+        "hex_code": "#0000FF"
+      }
+    ]
+  }
+]

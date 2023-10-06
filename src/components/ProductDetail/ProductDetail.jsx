@@ -1,55 +1,47 @@
-import React from 'react';
-import { Link, useLoaderData, useParams } from 'react-router-dom';
-import "../Home/Banner/style.css"
-import { FaCartArrowDown, FaShoppingBag } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { Rating } from '@smastrom/react-rating';
+import { useLoaderData, useParams } from 'react-router-dom';
+import { FaCartArrowDown, FaMinus, FaPlus } from 'react-icons/fa';
+import Description from './Description';
+import DetailTabs from './DetailTabs';
+import Zoom from 'react-img-zoom'
+
 const ProductDetail = () => {
-    // loading product data
-    const proData = useLoaderData();
+    const productData = useLoaderData()
     const proId = useParams();
     // finding the specific product
-    const theData = proData.filter(pro => pro.id == proId.id)
-    const { product_name, image, price, product_group, description } = theData[0]
-    
+    const theData = productData.filter(pro => pro.id == proId.id)
+    const { product_name, colors, image, price, product_group, description, rating } = theData[0]
+    const images = [`${image}`, '/public/phone1.png', '/public/phone2.png', '/public/phone3.png']
+    const [slideImg, setSlideImg] = useState(image)
+    console.log(slideImg)
     return (
-        <div className='banner-bg md:p-32 md:px-64 relative'>
-            {/* button to get back to the home page */}
-            <Link to="/"><button className='font-semibold bg-[#2B3467] rounded-full px-3 hover:bg-slate-600 text-white text-xl p-1 absolute md:right-60 md:top-28 top-5 right-5'>X</button></Link>
-            {/* Product Detail Card */}
-            <div className='md:grid grid-cols-3 r gap-20 bg-transparent shadow-2xl rounded-xl p-10'>
-                <div className='text-center md:my-10 md:border-4  md:pr-10'>
-                    <img className='w-96 mt-5 mx-auto' src={image} alt="" />
-                    <p className='text-2xl font-semibold text-[#2B3467] my-5'>{product_name}</p>
-                </div>
-                <div className='col-span-2 text-gray-600'>
-                    <h1 className='text-3xl font-semibold text-[#2B3467] mb-10 text-center'>Product Details</h1>
-                    <table className='text-xl font-semibold mx-auto'>
-                        <tr>
-                            <td className=' text-[#2B3467] w-52'>Product Name:</td>
-                            <td>{product_name}</td>
-                        </tr>
-                        <tr >
-                            <td className='py-10 text-[#2B3467]'>Description:</td>
-                            <td>{description}</td>
-                        </tr>
-                        <tr>
-                            <td className=' text-[#2B3467]'>Price:</td>
-                            <td>{price}</td>
-                        </tr>
-                        <tr>
-                            <td className='py-5 text-[#2B3467]'>Product Type:</td>
-                            <td>{product_group}</td>
-                        </tr>
-
-                    </table>
-                    <div className='flex gap-10'>
-                        <button className='flex items-center gap-3 font-semibold bg-[#EB455F] w-full justify-center py-3 text-white'>Buy <FaShoppingBag className='text-xl'></FaShoppingBag></button>
-                        <button className='flex items-center gap-3 font-semibold bg-[#2B3467] w-full justify-center py-3 text-white'>Add to Cart <FaCartArrowDown className='text-xl'></FaCartArrowDown></button>
+        <div className='pt-28 bg-gray-100'>
+            <div className='flex gap-10 justify-center items-start'>
+                {/* image section of the detail page */}
+                <div className='flex items-start gap-3'>
+                    <div className=''>
+                        <img onClick={() => setSlideImg(images[0])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500 ' src={images[0]} alt="" />
+                        <img onClick={() => setSlideImg(images[1])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500' src={images[1]} alt="" />
+                        <img onClick={() => setSlideImg(images[2])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500' src={images[2]} alt="" />
+                    </div>
+                    <div className={`w-72 bg-white p-5 border-2 cursor-move`}>
+                        {/* <img className='hover:p-0 hover:scale-125 mx-auto relative' src={slideImg} alt="" /> */}
+                        <Zoom
+                            key={slideImg}
+                            img={slideImg}
+                            zoomScale={3}
+                            width={250}
+                            height={250}
+                        />
 
                     </div>
 
-
                 </div>
+                {/* product details */}
+                <Description theData={theData[0]}></Description>
             </div>
+            <DetailTabs theData={theData[0]}></DetailTabs>
 
         </div>
     );

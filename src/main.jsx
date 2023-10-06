@@ -14,10 +14,16 @@ import { addedProductsCart } from './loader/getAddedProducts.js';
 import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
 import PaymentHistory from './components/Payment/PaymentHistory/PaymentHistory.jsx';
 import CheckoutForm from './components/Payment/CheckoutForm/CheckoutForm.jsx';
-import Login from './components/Login/Login.jsx';
+// import Login from './components/Login/Login.jsx';
 import Dashboard from './Layout/Dashboard.jsx';
 import User from './components/Dashboard/User/User.jsx';
 import Products from './components/Products/Products.jsx';
+// import Register from './components/Register/Register.jsx';
+
+import Faq from './components/FAQ/FAQ.jsx';
+import ProductProvider from './Provider/ProductProvider.jsx';
+import Register from './components/LoginRegister/Register/Register.jsx';
+import Login from './components/LoginRegister/Login/Login.jsx';
 
 
 
@@ -38,7 +44,7 @@ const router = createBrowserRouter([
       {
         path:"/product/:id",
         element:<ProductDetail></ProductDetail>,
-        loader:() => fetch(`/products.json`)
+        loader:() => fetch(`/datasets/products.json`)
       },
       {
         path:"/payment",
@@ -55,6 +61,14 @@ const router = createBrowserRouter([
       {
         path:'/product',
         element:<Products></Products>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
+      },
+      {
+        path:'/faq',
+        element:<Faq></Faq>
       }
       
     ]
@@ -73,6 +87,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ProductProvider>
     <RouterProvider router={router} />
+    </ProductProvider>
   </React.StrictMode>,
 )

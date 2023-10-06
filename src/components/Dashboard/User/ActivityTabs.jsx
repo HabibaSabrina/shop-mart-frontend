@@ -1,25 +1,36 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import OrderTrack from './OrderTrack';
 
 const ActivityTabs = () => {
     const [active, setActive] = useState(0)
     const [userOrder, setUserOrder] = useState([])
+    const [selected, setSelected] = useState([])
+    const [track, setTrack] = useState(false)
     const [review, setReview] = useState([])
     const handleSelect = (index) => {
         setActive(index)
     }
     const tabItem = ['Orders', 'Reviews']
     useState(() => {
-        fetch('/order.json')
+        fetch('/datasets/order.json')
             .then(res => res.json())
             .then(data => setUserOrder(data))
     }, [])
     useState(() => {
-        fetch('/reviews.json')
+        fetch('datasets/reviews.json')
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])
+    const showTrack = (theOrder) => {
+        setTrack(true);
+        setSelected(theOrder)
+    };
+
+    const closeTrack = () => {
+        setTrack(false);
+    };
 
     return (
         <div >
@@ -40,7 +51,13 @@ const ActivityTabs = () => {
                                     <p><b>Date:</b> {theOrder.date}</p>
                                     <p><b>Price:</b>  {theOrder.price}$</p>
                                 </div>
-                                <button className='text-white bg-[#2B3467] px-3 py-1'> {theOrder.status}</button>
+                                <div className='flex gap-5'>
+                                    <button className='text-white bg-[#2B3467] px-3 py-1'> {theOrder.status}</button>
+                                    <button onClick={() => showTrack(theOrder)} className='text-white bg-[#2B3467] px-3 py-1'>Order Track</button>
+                                    {track && (
+                                        <OrderTrack theOrder={selected} onClose={closeTrack} />
+                                    )}
+                                </div>
                             </div>)
                         }
                     </TabPanel>
@@ -67,6 +84,8 @@ const ActivityTabs = () => {
                             </div>)
                         }
                     </TabPanel>
+
+
                 </div>
             </Tabs>
         </div>
