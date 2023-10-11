@@ -6,9 +6,13 @@ export default {
   ],
   theme: {
     extend: {
-      
-    },
+      fontFamily: {
+        rubik: ['Rubik', 'sans'],
+        sans: ['Open Sans', 'sans'],
+      },
+
   },
-  plugins: [require("daisyui")],
+},
+plugins: [require("daisyui")],
 }
 

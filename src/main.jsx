@@ -24,6 +24,7 @@ import Faq from './components/FAQ/FAQ.jsx';
 import ProductProvider from './Provider/ProductProvider.jsx';
 import Register from './components/LoginRegister/Register/Register.jsx';
 import Login from './components/LoginRegister/Login/Login.jsx';
+import About from './components/About/About.jsx';
 
 
 
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path:'/faq',
         element:<Faq></Faq>
+      },
+      {
+        path:'/about',
+        element:<About></About>
       }
       
     ]

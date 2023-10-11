@@ -5,7 +5,7 @@ const PaymentHistory = () => {
     const paidProducts = JSON.parse(localStorage.getItem('bought'))
     console.log(paidProducts)
     return (
-        <div className='bg-gray-100 py-20 pb-56 px-10'>
+        <div className='bg-gray-100 py-20 md:px-10'>
             {/* Payment history page header */}
             <h1 className='border-y-2 border-[#2B3467] border-dashed text-[#2B3467] text-center mb-10 text-3xl font-semibold w-96 p-2 mx-auto '>Payment History</h1>
             {/* history table */}

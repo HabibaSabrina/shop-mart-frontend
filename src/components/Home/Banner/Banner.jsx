@@ -47,14 +47,15 @@ const Banner = () => {
         AOS.init();
     }, [])
     return (
-        <div className=' bg-gradient-to-b from-[#2B3467] to-gray-300 flex items-center gap-20 '>
+        <div className=' bg-gradient-to-b from-[#2B3467] to-gray-300 md:flex items-center gap-20 '>
             {/* Main image of the banner */}
-            <img className='ml-20 mt-auto' src="/banner/bannerP.png" alt="" />
+            <img className='md:ml-20 mt-auto' src="/banner/bannerP.png" alt="" />
             {/* Right portion of the banner */}
-            <div className=' p-10 pt-20' data-aos="fade-left" data-aos-duration={1000}>
+            <div className=' md:p-10 p-5 md:pt-20' data-aos="fade-right" data-aos-duration={1000}>
                 <BannerInfo></BannerInfo>
                 {/* banner cards */}
-                <div className='w-[750px] mt-10 mx-auto'>
+                <div className='md:w-[750px] mt-10 mx-auto'>
+                    {/* images card of banner */}
                     <Marquee pauseOnHover={true} speed={60}>
                         {
                             products.map(slide => <BannerCard key={slide.id} slide={slide}></BannerCard>)

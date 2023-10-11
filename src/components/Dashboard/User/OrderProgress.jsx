@@ -4,7 +4,7 @@ import { FaCheck, FaGift, FaTruck, FaUser } from 'react-icons/fa';
 const OrderProgress = ({status}) => {
     return (
         <div className='my-5 px-3'>
-            <div className=' mx-14 rounded-full h-2 relative top-5 flex'>
+            <div className=' md:mx-14 rounded-full h-2 relative top-5 flex'>
                 <p className='bg-[#EB455F] w-1/2 h-full'></p>
                 <p className={`${status == 'Delivered' ? 'bg-[#EB455F]' : 'bg-gray-300'}  w-1/2 h-full`}></p>
             </div>

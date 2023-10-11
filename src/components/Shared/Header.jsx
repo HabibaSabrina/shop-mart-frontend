@@ -26,7 +26,8 @@ const Header = () => {
     return (
         // header of the website
         <div className={`flex items-center justify-between p-5 ${pos == "top" || 'bg-opacity-90 duration-1000'} bg-[#2B3467] shadow text-white duration-1000 h-16 font-semibold fixed w-full z-30`}>
-            <div className='flex gap-10'>
+            <div className='flex items-center gap-10'>
+                <img className='w-32' src="/logo.png" alt="" />
 
                 <div className={`relative mx-auto duration-700`}>
                     <Link to="/"><p onMouseEnter={() => mouseEnter(1)} onMouseLeave={() => mouseLeave()} className='text-center'>Home</p></Link>

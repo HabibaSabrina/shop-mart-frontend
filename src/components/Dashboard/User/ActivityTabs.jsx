@@ -19,7 +19,7 @@ const ActivityTabs = () => {
             .then(data => setUserOrder(data))
     }, [])
     useState(() => {
-        fetch('datasets/reviews.json')
+        fetch('/datasets/reviews.json')
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])
@@ -42,7 +42,7 @@ const ActivityTabs = () => {
                     }
                 </TabList>
                 {/* tab panels */}
-                <div className='bg-gray-100 p-10'>
+                <div className='bg-gray-100 p-5'>
                     <TabPanel >
                         {
                             userOrder.map(theOrder => <div className='flex justify-between items-center p-5 bg-white mb-3' key={theOrder.orderId}>

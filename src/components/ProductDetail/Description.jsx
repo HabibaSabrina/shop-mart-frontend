@@ -5,7 +5,7 @@ import { FaCartArrowDown, FaMinus, FaPlus, FaShoppingBag } from 'react-icons/fa'
 const Description = ({ theData }) => {
     const { product_name, image, price, colors, product_group, description, rating } = theData
     return (
-        <div className='w-2/5'>
+        <div className='md:w-2/5 max-sm:mt-5'>
             <h1 className='text-2xl text-white p-3 font-bold bg-[#2B3467]'>{product_name}</h1>
             <div className='px-4'>
                 <p className='text-xl font-semibold my-2'>{price}$</p>
@@ -22,8 +22,9 @@ const Description = ({ theData }) => {
                         
                     </div>
                 </div>
-                <div className='flex gap-10 my-5 items-center'>
-                    <div className='flex items-center gap-5'>
+                {/* buttons of product details pages */}
+                <div className='flex md:gap-10 gap-2 my-5 items-center'>
+                    <div className='flex items-center md:gap-5 gap-3'>
                         <FaPlus className='bg-[#2B3467] text-white text-2xl p-2 rounded-full'></FaPlus>
                         <p className='text-xs font-semibold'>1</p>
                         <FaMinus className='bg-[#2B3467] text-white text-2xl p-2 rounded-full'></FaMinus>

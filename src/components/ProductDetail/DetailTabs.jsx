@@ -15,10 +15,10 @@ const DetailTabs = ({ theData }) => {
     }
     console.log(theData)
     return (
-        <div className='mx-60 pb-10'>
+        <div className='md:mx-60 pb-10'>
             <Tabs onSelect={handleSelect}>
                 {/* Tab buttons of the user page */}
-                <TabList className='flex gap-10'>
+                <TabList className='flex md:gap-10 gap-5 px-5'>
                     {
                         tabList.map((tab, i) => <Tab key={i} className=' focus:outline-none h-10 py-1 text-[#2B3467] font-bold cursor-pointer'><div><p>{tab}</p><p className={`border-b-4 border-[#EB455F]  mt-1 ${active == i ? 'w-full duration-1000' : 'w-0 duration-1000'}`}></p></div></Tab>)
                     }

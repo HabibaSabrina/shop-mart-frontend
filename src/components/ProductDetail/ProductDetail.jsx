@@ -17,15 +17,15 @@ const ProductDetail = () => {
     console.log(slideImg)
     return (
         <div className='pt-28 bg-gray-100'>
-            <div className='flex gap-10 justify-center items-start'>
+            <div className='md:flex gap-10 justify-center items-start'>
                 {/* image section of the detail page */}
-                <div className='flex items-start gap-3'>
+                <div className='flex items-start gap-3 mx-5'>
                     <div className=''>
                         <img onClick={() => setSlideImg(images[0])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500 ' src={images[0]} alt="" />
                         <img onClick={() => setSlideImg(images[1])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500' src={images[1]} alt="" />
                         <img onClick={() => setSlideImg(images[2])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500' src={images[2]} alt="" />
                     </div>
-                    <div className={`w-72 bg-white p-5 border-2 cursor-move`}>
+                    <div className={`md:w-72 bg-white p-5 border-2 cursor-move`}>
                         {/* <img className='hover:p-0 hover:scale-125 mx-auto relative' src={slideImg} alt="" /> */}
                         <Zoom
                             key={slideImg}
