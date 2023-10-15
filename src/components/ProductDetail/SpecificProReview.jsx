@@ -4,6 +4,7 @@ import React from 'react';
 const SpecificProReview = ({ review }) => {
     return (
         <div className="bg-white mb-5 p-5">
+            {/* product reviews */}
             <div className=" flex gap-3 items-center">
                 <img className="w-10 rounded-full border-2 border-[#2B3467] " src={review.person_image} alt="" />
                 <div>

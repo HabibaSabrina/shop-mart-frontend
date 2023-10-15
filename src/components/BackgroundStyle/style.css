@@ -1,0 +1,13 @@
+.card-bg{
+    background-image: url('/blue.jpg');
+    background-size: cover;
+
+}
+.banner-bg{
+    background-image: url("/bg-gray.jpg");
+    background-size: cover;
+}
+.title-bg{
+    background-image: url("/gradient.png");
+    background-size: cover;
+}

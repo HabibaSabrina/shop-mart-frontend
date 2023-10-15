@@ -25,6 +25,7 @@ const DetailTabs = ({ theData }) => {
                 </TabList>
                 {/* tab panels */}
                 <div className='bg-gray-100 p-5'>
+                    {/* tab panel for product description */}
                     <TabPanel >
                         <div className='bg-white p-5 leading-7'>
                             <TabTitle title={'Product Description'}></TabTitle>
@@ -34,6 +35,7 @@ const DetailTabs = ({ theData }) => {
                         </div>
                     </TabPanel>
                     <TabPanel >
+                        {/* tab panel for product specification */}
                         <div className='bg-white p-5 w-full'>
                         <TabTitle title={'Product Specifications'}></TabTitle>
 
@@ -54,6 +56,7 @@ const DetailTabs = ({ theData }) => {
                         </div>
                     </TabPanel>
                     <TabPanel >
+                        {/* tab panel for customer reviews */}
                         <div className='pt-5'>
                         <TabTitle title={'Customer Reviews'}></TabTitle>
                         </div>
@@ -64,6 +67,7 @@ const DetailTabs = ({ theData }) => {
 
                     </TabPanel>
                     <TabPanel>
+                        {/* tab panel for my review */}
                         <YourReview></YourReview>
                     </TabPanel>
 

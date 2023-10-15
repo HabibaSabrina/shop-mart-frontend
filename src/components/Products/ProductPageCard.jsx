@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { FaCartArrowDown, FaEye, FaShoppingBag } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import '../Products/style.css'
+import '../BackgroundStyle/style.css'
 import CardDetail from './CardDetail';
-import '../Home/Banner/style.css'
+import { Link } from 'react-router-dom';
 
 const ProductPageCard = ({ product }) => {
     useEffect(() => {
@@ -35,7 +35,7 @@ const ProductPageCard = ({ product }) => {
                         isHovered &&  
                         <div className='absolute flex justify-center gap-5 top-0 bg-black w-full h-full backdrop-blur-sm text-gray-50 bg-opacity-50' >
                         <div className='flex gap-5 top-20 text-2xl absolute' >
-                        <FaEye data-aos="fade-up" data-aos-duration={1000}></FaEye>
+                        <Link to={`/product/${id}`}><FaEye data-aos="fade-up" data-aos-duration={1000}></FaEye></Link>
                         <FaShoppingBag data-aos="fade-up" data-aos-duration={1000}></FaShoppingBag>
                         <FaCartArrowDown data-aos="fade-up" data-aos-duration={1000}></FaCartArrowDown>
                         </div>

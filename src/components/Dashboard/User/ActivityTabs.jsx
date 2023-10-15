@@ -1,28 +1,20 @@
-import React, { useState } from 'react';
-import { FaStar } from 'react-icons/fa';
+import React, { useContext, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import OrderTrack from './OrderTrack';
+import { UserContext } from '../../../Provider/UserProvider';
+import { Rating } from '@smastrom/react-rating';
 
 const ActivityTabs = () => {
+    const [user] = useContext(UserContext) //loading user data
+    const {orders, reviews} = user // orders and reviews of user
     const [active, setActive] = useState(0)
-    const [userOrder, setUserOrder] = useState([])
     const [selected, setSelected] = useState([])
     const [track, setTrack] = useState(false)
-    const [review, setReview] = useState([])
     const handleSelect = (index) => {
         setActive(index)
     }
     const tabItem = ['Orders', 'Reviews']
-    useState(() => {
-        fetch('/datasets/order.json')
-            .then(res => res.json())
-            .then(data => setUserOrder(data))
-    }, [])
-    useState(() => {
-        fetch('/datasets/reviews.json')
-            .then(res => res.json())
-            .then(data => setReview(data))
-    }, [])
+    
     const showTrack = (theOrder) => {
         setTrack(true);
         setSelected(theOrder)
@@ -42,14 +34,15 @@ const ActivityTabs = () => {
                     }
                 </TabList>
                 {/* tab panels */}
-                <div className='bg-gray-100 p-5'>
+                <div className='bg-gray-200 p-5'>
+                    {/* orders panel of the user */}
                     <TabPanel >
                         {
-                            userOrder.map(theOrder => <div className='flex justify-between items-center p-5 bg-white mb-3' key={theOrder.orderId}>
+                           orders && orders.map(theOrder => <div className='flex justify-between items-center p-5 bg-white mb-3' key={theOrder.orderId}>
                                 <div>
                                     <p><b>Order Id:</b> {theOrder.orderId}</p>
                                     <p><b>Date:</b> {theOrder.date}</p>
-                                    <p><b>Price:</b>  {theOrder.price}$</p>
+                                    <p><b>Price:</b>  {theOrder.total_price}$</p>
                                 </div>
                                 <div className='flex gap-5'>
                                     <button className='text-white bg-[#2B3467] px-3 py-1'> {theOrder.status}</button>
@@ -61,25 +54,19 @@ const ActivityTabs = () => {
                             </div>)
                         }
                     </TabPanel>
+                    {/* review panel of the user */}
                     <TabPanel>
                         {
-                            review.map(rev => <div className='p-5 bg-white mb-3' key={rev.id}>
-                                <div className='flex items-center justify-between w-full'>
+                           reviews && reviews.map((rev, i) => <div className='p-5 bg-white mb-3' key={i}>
+                                <div className='flex items-center justify-between gap-10 w-full'>
                                     <div>
-                                        <p><b>{rev.product_name}</b></p>
-                                        <div className='flex gap-2 text-yellow-400 my-2'>
-                                            <FaStar></FaStar>
-                                            <FaStar></FaStar>
-                                            <FaStar></FaStar>
-                                            <FaStar></FaStar>
-                                            <FaStar></FaStar>
+                                        <p><b>{rev.reviewed_product_name}</b></p>
+                                        <div className='w-20 my-1'>
+                                            <Rating value={rev.ratings}></Rating>
                                         </div>
+                                        <p>{rev.review}</p>
                                     </div>
-                                    <img className='w-14' src={rev.image} alt="" />
-                                </div>
-                                <div>
-                                    <p><b>Review</b></p>
-                                    <p>{rev.review}</p>
+                                    <img className='w-16 bg-gray-200 p-2' src={rev.reviewed_product_image} alt="" />
                                 </div>
                             </div>)
                         }

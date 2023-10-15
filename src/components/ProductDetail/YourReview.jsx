@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating';
 import { FaPen, FaStar, FaUser } from 'react-icons/fa';
 import TabTitle from './TabTitle';
-// import CheckoutInputField from '../Payment/CheckoutForm/CheckoutInputField'
 const YourReview = () => {
     const [rating, setRating] = useState(0)
     return (
@@ -10,6 +9,7 @@ const YourReview = () => {
             <TabTitle title={'Your Review'}></TabTitle>
             <div className='mb-5 bg-gray-100 p-5'>
             <div className='w-28 '>
+                {/* my review section input field design */}
             <p className='font-bold text-[#2B3467] mb-3 flex items-center gap-1'>Rating <FaStar></FaStar></p>
                 <Rating orientation='horizontal' value={rating} onChange={setRating}></Rating>
             </div>

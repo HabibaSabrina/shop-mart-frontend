@@ -11,8 +11,7 @@ const ProductDetail = () => {
     const proId = useParams();
     // finding the specific product
     const theData = productData.filter(pro => pro.id == proId.id)
-    const { product_name, colors, image, price, product_group, description, rating } = theData[0]
-    const images = [`${image}`, '/public/phone1.png', '/public/phone2.png', '/public/phone3.png']
+    const { product_images, image} = theData[0]
     const [slideImg, setSlideImg] = useState(image)
     console.log(slideImg)
     return (
@@ -21,12 +20,12 @@ const ProductDetail = () => {
                 {/* image section of the detail page */}
                 <div className='flex items-start gap-3 mx-5'>
                     <div className=''>
-                        <img onClick={() => setSlideImg(images[0])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500 ' src={images[0]} alt="" />
-                        <img onClick={() => setSlideImg(images[1])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500' src={images[1]} alt="" />
-                        <img onClick={() => setSlideImg(images[2])} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500' src={images[2]} alt="" />
+                        {
+                            product_images && product_images.map((pro_img, i) => <img key={i} onClick={() => setSlideImg(pro_img)} className='w-16 mb-3 border-2 bg-white p-1 cursor-pointer hover:bg-gray-400 hover:duration-500 ' src={pro_img} alt="" />)
+                        }
                     </div>
+                    {/* big size image with zoom feature */}
                     <div className={`md:w-72 bg-white p-5 border-2 cursor-move`}>
-                        {/* <img className='hover:p-0 hover:scale-125 mx-auto relative' src={slideImg} alt="" /> */}
                         <Zoom
                             key={slideImg}
                             img={slideImg}

@@ -9,7 +9,7 @@ import ContactUs from '../ContactUs/ContactUs';
 
 const Home = () => {
     return (
-        <div>
+        <div className='scroll-smooth'>
             <Banner></Banner>
             <Info></Info>
             <TopProduct></TopProduct>

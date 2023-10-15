@@ -1,0 +1,168 @@
+{
+    "name": "Raisa Khan",
+    "email": "raisakhan@example.com",
+    "phone": "555-555-5555",
+    "address": "123 Main St, City, Country",
+    "user_image": "/user/girl.jpg",
+    "orders": [
+      {
+        "orderId": "1",
+        "order_name": "Order 1",
+        "date": "2023-10-12",
+        "total_price": 100.00,
+        "status": "Delivered",
+        "product_names": ["Smartphone", "Dining Table"],
+        "product_images": ["/slider/phone.png", "/slider/dining.png"],
+        "product_prices": [50.00, 30.00]
+      },
+      {
+        "orderId": "2",
+        "order_name": "Order 2",
+        "date": "2023-10-15",
+        "total_price": 80.00,
+        "status": "Processing",
+        "product_names": ["Men's T-Shirt", "Board Game"],
+        "product_images": ["/slider/tshirt.png", "/slider/chess.png"],
+        "product_prices": [40.00, 40.00]
+      },
+      {
+        "orderId": "3",
+        "order_name": "Order 3",
+        "date": "2023-10-18",
+        "total_price": 90.00,
+        "status": "Delivered",
+        "product_names": ["Sofa", "Luxury Watch"],
+        "product_images": ["/slider/SOFA.png", "/slider/watch.png"],
+        "product_prices": [60.00, 30.00]
+      },
+      {
+        "orderId": "4",
+        "order_name": "Order 4",
+        "date": "2023-10-21",
+        "total_price": 120.00,
+        "status": "Processing",
+        "product_names": ["Action Figure", "Women's Dress"],
+        "product_images": ["/slider/action.png", "/slider/girldress.png"],
+        "product_prices": [45.00, 75.00]
+      }
+    ],
+    "reviews": [
+      {
+        "reviewed_product_name": "Smartphone",
+        "reviewed_product_image": "/slider/phone.png",
+        "review": "Great phone, excellent performance!",
+        "ratings": 5
+      },
+      {
+        "reviewed_product_name": "Dining Table",
+        "reviewed_product_image": "/slider/dining.png",
+        "review": "Sturdy and well-designed dining table!",
+        "ratings": 4
+      },
+      {
+        "reviewed_product_name": "Men's T-Shirt",
+        "reviewed_product_image": "/slider/tshirt.png",
+        "review": "Comfortable and stylish t-shirt!",
+        "ratings": 4
+      },
+      {
+        "reviewed_product_name": "Diamond Necklace",
+        "reviewed_product_image": "/slider/necklace.png",
+        "review": "Elegant and beautiful necklace!",
+        "ratings": 5
+      }
+    ],
+    "cart": [
+      {
+        "cart_product": "Smartphone",
+        "cart_product_image": "/slider/phone.png",
+        "cart_product_price": 50.00,
+        "quantity": 1
+      },
+      {
+        "cart_product": "Dining Table",
+        "cart_product_image": "/slider/dining.png",
+        "cart_product_price": 30.00,
+        "quantity": 2
+      },
+      {
+        "cart_product": "Men's T-Shirt",
+        "cart_product_image": "/slider/tshirt.png",
+        "cart_product_price": 40.00,
+        "quantity": 3
+      },
+      {
+        "cart_product": "Diamond Necklace",
+        "cart_product_image": "/slider/necklace.png",
+        "cart_product_price": 35.00,
+        "quantity": 1
+      }
+    ],
+    "payments": [
+      {
+        "transactionId": "111111",
+        "ordered_product_name": "Smartphone",
+        "ordered_product_images": ["/slider/phone.png"],
+        "paid": 50.00,
+        "status": "paid",
+        "transaction_date": "2023-10-25"
+      },
+      {
+        "transactionId": "222222",
+        "ordered_product_name": "Dining Table",
+        "ordered_product_images": ["/slider/dining.png"],
+        "paid": 30.00,
+        "status": "paid",
+        "transaction_date": "2023-10-26"
+      },
+      {
+        "transactionId": "333333",
+        "ordered_product_name": "Men's T-Shirt",
+        "ordered_product_images": ["/slider/tshirt.png"],
+        "paid": 40.00,
+        "status": "paid",
+        "transaction_date": "2023-10-27"
+      },
+      {
+        "transactionId": "444444",
+        "ordered_product_name": "Board Game",
+        "ordered_product_images": ["/slider/chess.png"],
+        "paid": 40.00,
+        "status": "paid",
+        "transaction_date": "2023-10-28"
+      },
+      {
+        "transactionId": "555555",
+        "ordered_product_name": "Sofa",
+        "ordered_product_images": ["/slider/SOFA.png"],
+        "paid": 60.00,
+        "status": "paid",
+        "transaction_date": "2023-10-29"
+      },
+      {
+        "transactionId": "666666",
+        "ordered_product_name": "Luxury Watch",
+        "ordered_product_images": ["/slider/watch.png"],
+        "paid": 30.00,
+        "status": "paid",
+        "transaction_date": "2023-10-30"
+      },
+      {
+        "transactionId": "777777",
+        "ordered_product_name": "Action Figure",
+        "ordered_product_images": ["/slider/action.png"],
+        "paid": 45.00,
+        "status": "paid",
+        "transaction_date": "2023-10-31"
+      },
+      {
+        "transactionId": "888888",
+        "ordered_product_name": "Women's Dress",
+        "ordered_product_images": ["/slider/girldress.png"],
+        "paid": 75.00,
+        "status": "paid",
+        "transaction_date": "2023-11-01"
+      }
+    ]
+  }
+  

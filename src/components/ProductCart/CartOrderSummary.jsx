@@ -3,7 +3,8 @@ import { FaShoppingBag, FaTrash } from 'react-icons/fa';
 
 const CartOrderSummary = ({totalQuantity, grandTotal, totalPrice }) => {
     return (
-        <div className='bg-[#2B3467] text-white border border-[#2B3467] mt-20'>
+        <div className='bg-[#2B3467] text-white border border-[#2B3467] mt-20' data-aos="fade-down" data-aos-duration={1000}>
+            {/* details of order summary */}
             <div className='p-10'>
                 <p className='text-3xl font-semibold mb-5'>Order Summary</p>
                 <div className='text-xl'>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BannerCard = ({slide}) => {
-   
+//    banner card design
     return (
         <div className='mx-5 duration-500 '
         >

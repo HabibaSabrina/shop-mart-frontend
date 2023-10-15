@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const categories = ['Electronic Item', 'Toys and Games', 'Fashion Wear', 'Home Furniture', 'Jewelry and Watches', 'Office Supplies']
-    // const links = [
-    //     {
-    //         Home: '/',
-    //         Product: '/product',
-    //         Payment: '/payment'
-    //     }
-    // ]
     return (
         <div className='bg-[#1a1f3d] p-10 md:flex justify-center leading-7 gap-32 text-gray-200'>
             <div className='md:w-96'>

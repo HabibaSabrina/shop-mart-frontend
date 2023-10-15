@@ -1,0 +1,102 @@
+{
+   "products": [
+    {
+        "id": 1,
+        "image": "/banner/electronic.jpg",
+        "name": "Electronic Item"
+    },
+    {
+        "id": 2,
+        "image": "/banner/toys.jpg",
+        "name": "Toys and Games"
+    },
+    {
+        "id": 3,
+        "image": "/banner/fashion.jpg",
+        "name": "Fashion Wear"
+    },
+    {
+        "id": 4,
+        "image": "/banner/furniture.png",
+        "name": "Home Furniture"
+    },
+    {
+        "id": 5,
+        "image": "/banner/jewlery.jpg",
+        "name": "Jewelry and Watches"
+    },
+    {
+        "id": 6,
+        "image": "/banner/supplies.jpg",
+        "name": "Office Supplies"
+    }
+
+],
+    "about":[
+        {
+            "title": "Our Journey",
+            "tagline":"A Legacy of Shopping Excellence",
+            "image":"/about/office.jpg",
+            "description": "Discover the essence of Shop Mart&apos;s remarkable journey in our &quot;Our Story&quot; section. Established in 2023, we&apos;ve grown from a small online store to a global e-commerce powerhouse. Rooted in values of quality and affordability, our customer-centric approach has driven our success. We embrace innovation, employ cutting-edge technology, and prioritize sustainability. Shop Mart is more than a retailer; it&apos;s a community engaged in charitable initiatives. As we look ahead, we&apos;re committed to expanding our offerings and enhancing your shopping experience. Join us in shaping the future as we continue to write the inspiring story of Shop Mart together. Thank you for being a part of our journey."
+        },
+        {
+            "title":"Our Mission",
+            "tagline":"Transforming Shopping into an Extraordinary Experience",
+            "image":"/about/shopping.jpg",
+            "description":"Discover the essence of Shop Mart&apos;s remarkable journey in our &quot;Our Story&quot; section. Established in [year], we&apos;ve grown from a small online store to a global e-commerce powerhouse. Rooted in values of quality and affordability, our customer-centric approach has driven our success. We embrace innovation, employ cutting-edge technology, and prioritize sustainability. Shop Mart is more than a retailer; it&apos;s a community engaged in charitable initiatives. As we look ahead, we&apos;re committed to expanding our offerings and enhancing your shopping experience. Join us in shaping the future as we continue to write the inspiring story of Shop Mart together. Thank you for being a part of our journey."
+        }
+    ],
+    "faq":[
+        {
+          "id": 6,
+          "question": "Where can I find product specifications and details?",
+          "answer": "You can find detailed product specifications and information on each product's dedicated product page."
+        },
+        {
+          "id": 7,
+          "question": "What should I do if a product is out of stock?",
+          "answer": "If a product is out of stock, you can sign up for notifications to receive an email when it becomes available again. Alternatively, you can explore similar products in our catalog."
+        },
+        {
+          "id": 8,
+          "question": "How can I update my personal information?",
+          "answer": "You can update your personal information by logging into your account and accessing the 'Profile' or 'Account Settings' section."
+        },
+        {
+          "id": 9,
+          "question": "What is your policy on discounts and special offers?",
+          "answer": "We regularly offer discounts and special promotions. To stay updated, subscribe to our newsletter or visit our 'Offers' page for the latest deals."
+        },
+        {
+          "id": 10,
+          "question": "How is my personal information protected?",
+          "answer": "We take your privacy and security seriously. We employ industry-standard encryption and security measures to protect your personal information. Please refer to our Privacy Policy for more details."
+        },
+        {
+          "id": 11,
+          "question": "Do you share my information with third parties?",
+          "answer": "We do not share your personal information with third parties without your consent. Your privacy is important to us, and we adhere to strict privacy practices."
+        },
+        {
+          "id": 12,
+          "question": "I'm experiencing issues with the website. What should I do?",
+          "answer": "If you encounter any technical issues with our website, please clear your browser cache and try again. If the problem persists, reach out to our customer support team for assistance."
+        },
+        {
+          "id": 13,
+          "question": "How do I initiate a return or exchange?",
+          "answer": "To initiate a return or exchange, log in to your account, go to the 'Order History' section, and select the order containing the item you wish to return or exchange. Follow the provided instructions."
+        },
+        {
+          "id": 14,
+          "question": "What are your terms of service?",
+          "answer": "Our terms of service outline the rules and regulations for using our website. You can find them in the 'Terms and Conditions' section at the bottom of our website."
+        },
+        {
+          "id": 15,
+          "question": "Do you ship internationally?",
+          "answer": "Yes, we offer international shipping to many countries. During checkout, you can select your country to view available shipping options and rates."
+        }
+      ]
+      
+}

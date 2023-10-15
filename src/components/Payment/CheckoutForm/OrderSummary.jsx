@@ -5,6 +5,7 @@ import PaymentModal from './PaymentModal';
 const OrderSummary = () => {
     return (
         <div className='bg-white p-5 border-8 mt-10 border-double'>
+            {/* order summary table  */}
             <h1 className='text-xl font-bold text-[#2B3467] mb-5'>Order Summary</h1>
             <p className='border-b-2 border-[#2B3467]'></p>
             <table className='md:w-96 w-full font-semibold'>

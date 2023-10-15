@@ -1,51 +1,30 @@
 import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import ProductCard from '../ProductCard/ProductCard';
+import { calculateSlideIndex } from './calculateSlideIndex';
+
+
 
 const SliderComponent = ({ currentIndex, setCurrentIndex, itemsPerPage, products }) => {
-    // const [currentIndex, setCurrentIndex] = useState(0);
-    // const itemsPerPage = 4;
-
+    // calculating sliding components per page
     const nextSlide = () => {
-        if (itemsPerPage == 4) {
-            setCurrentIndex((prevIndex) =>
-                prevIndex + itemsPerPage < products.length ? prevIndex + itemsPerPage - (itemsPerPage-1) : 0
-            );
-        }
-        else {
-
-            setCurrentIndex((prevIndex) =>
-                prevIndex + 1 < products.length ? prevIndex + 1 : 0
-            );
-        }
-
-
-
-
-
+        const newIndex = calculateSlideIndex(currentIndex, itemsPerPage, 'next', products);
+        setCurrentIndex(newIndex);
     };
+
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => {
-            if (prevIndex === 0) {
-                // If at the beginning, go to the last set of slides
-                const lastSetIndex = products.length - itemsPerPage;
-                return lastSetIndex;
-            } else if (prevIndex % itemsPerPage === 0) {
-                // If at the beginning of a set, go to the previous set
-                return prevIndex - itemsPerPage;
-            } else {
-                // Otherwise, just go back one slide
-                return prevIndex - 1;
-            }
-        }
-        );
+        const newIndex = calculateSlideIndex(currentIndex, itemsPerPage, 'prev', products);
+        setCurrentIndex(newIndex);
     };
-
 
     const visibleSlides = products.slice(currentIndex, currentIndex + itemsPerPage);
 
+    
+    
+
     return (
-        <div className=' w-full m-auto py-10 px-4 relative group'>
+        <div className=' w-full m-auto pt-10 px-4 relative group'>
+            {/* product card loop in the slider */}
             <div className='flex'>
                 {
                     visibleSlides.map(slide => <ProductCard key={slide.id} slide={slide}></ProductCard>)

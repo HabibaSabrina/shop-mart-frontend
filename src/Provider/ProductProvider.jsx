@@ -6,6 +6,7 @@ import { createContext } from 'react';
 export const ProductContext = createContext([])
 const ProductProvider = ({children}) => {
     const [products, setProducts] = useState([])
+    // fetching product data set
     useEffect(() =>{
         fetch('/datasets/products.json')
         .then(res => res.json())

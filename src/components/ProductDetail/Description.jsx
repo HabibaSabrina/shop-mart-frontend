@@ -6,6 +6,7 @@ const Description = ({ theData }) => {
     const { product_name, image, price, colors, product_group, description, rating } = theData
     return (
         <div className='md:w-2/5 max-sm:mt-5'>
+            {/* product info */}
             <h1 className='text-2xl text-white p-3 font-bold bg-[#2B3467]'>{product_name}</h1>
             <div className='px-4'>
                 <p className='text-xl font-semibold my-2'>{price}$</p>

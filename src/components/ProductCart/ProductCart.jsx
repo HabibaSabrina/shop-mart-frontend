@@ -1,29 +1,34 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
 import ProductCartRow from './ProductCartRow';
 import CartOrderSummary from './CartOrderSummary';
+import HeadlineDesign from '../DesignComponents/HeadlineDesign';
+import { UserContext } from '../../Provider/UserProvider';
 
 const ProductCart = () => {
-    // loading the saved data of the cart
-    const { addedProductsArr } = useLoaderData()
+    const [user] = useContext(UserContext)
+    const {cart} = user
     let totalPrice = 0;
     let totalQuantity = 0;
     // finding total price, total quantity and grand total of the product
-    addedProductsArr.forEach(thePro => {
-        totalPrice = totalPrice + (thePro.price * thePro.quantity);
+    const thecart = cart && cart.forEach(thePro => {
+        totalPrice = totalPrice + (thePro.cart_product_price * thePro.quantity);
         totalQuantity = totalQuantity + thePro.quantity
     });
     const grandTotal = totalPrice + 5; //adding 5 dollar as shipping charge
     return (
-        <div className='flex justify-center gap-28 items-start bg-gray-50 py-10'>
+        <div className='md:pt-16 pt-10 bg-gray-50 pb-10'>
+            <HeadlineDesign headline={'Cart Products'}></HeadlineDesign>
+            <div className='md:flex justify-center gap-28 items-start'>
             {/* Cart products */}
-            <div className='w-1/2'>
+            <div className='md:w-1/2'>
+                <p className='bg-[#2B3467] text-white px-5 py-3 font-bold text-xl mb-5' data-aos="fade-right" data-aos-duration={1000}>Selected products</p>
                 {
-                    addedProductsArr.map(theProduct => <ProductCartRow key={theProduct.id} theProduct={theProduct}></ProductCartRow>)
+                    cart && cart.map((theProduct, i) => <ProductCartRow key={i} theProduct={theProduct}></ProductCartRow>)
                 }
             </div>
             {/* order summary */}
            <CartOrderSummary totalPrice={totalPrice} grandTotal={grandTotal} totalQuantity={totalQuantity}></CartOrderSummary>
+        </div>
         </div>
     );
 };
