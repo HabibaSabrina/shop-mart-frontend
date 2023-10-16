@@ -21,7 +21,7 @@ const Footer = () => {
                 <img className='w-1/2' src="/logo.png" alt="" />
                 <p className='mt-2'>Shopmart is an online retail website that offers a wide range of products for purchase, including electronics, fashion items, home goods, and more. Customers can browse and buy products conveniently from their website.</p>
             </div>
-            <div className='flex gap-32 max-sm:my-10'>
+            <div className='flex gap-5 md:gap-32 max-sm:my-10'>
                 {/* categories */}
                 <div className=''>
                     <p className='pb-2 font-bold text-white'>Categories</p>

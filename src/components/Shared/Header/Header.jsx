@@ -45,7 +45,7 @@ const Header = () => {
                     <div className='flex items-center gap-10'>
                         <img className='w-32 max-sm:absolute left-14' src="/logo.png" alt="" />
                             <button className='md:hidden absolute' onClick={() => setOpen(!open)}>{open ? <p className=' '>X</p> : <FaBars></FaBars>}</button>
-                       <div className={`md:flex absolute md:static max-sm:p-3 md:bg-opacity-0 items-center gap-10 ${open ? 'bg-[#2B3467] top-[59px]' : 'bg-[#2B3467] -top-64'} ${pos == "top" || 'bg-opacity-90 duration-1000'}`}>
+                       <div className={`md:flex absolute md:static max-sm:p-3 md:bg-opacity-0 items-center gap-10 ${open ? 'bg-[#2B3467] top-[51px]' : 'bg-[#2B3467] -top-64'} ${pos == "top" || 'bg-opacity-90 duration-1000'}`}>
                        {
                             navLink.map((item, index) =>
                                 <NavItems
