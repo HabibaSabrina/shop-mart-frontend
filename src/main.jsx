@@ -24,6 +24,7 @@ import Login from './components/LoginRegister/Login/Login.jsx';
 import About from './components/About/About.jsx';
 import UserProvider from './Provider/UserProvider.jsx';
 import InfoProvider from './Provider/InfoProvider.jsx';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy.jsx';
 
 
 
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
       {
         path:'/user',
         element:<User></User>
+      },
+      {
+        path:'/privacy',
+        element:<PrivacyPolicy></PrivacyPolicy>
       }
       
     ]

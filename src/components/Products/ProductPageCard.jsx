@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { FaCartArrowDown, FaEye, FaShoppingBag } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import '../BackgroundStyle/style.css'
 import CardDetail from './CardDetail';
 import { Link } from 'react-router-dom';
 
 const ProductPageCard = ({ product }) => {
-    useEffect(() => {
-        AOS.init();
-    }, [])
-    const { id, image, product_name, price, description } = product
+   
+    const { id, image, product_name, price, description, rating } = product
     const [isHovered, setIsHovered] = useState(null);
 
     // functions for mouse on the card image or not
     const handleMouseEnter = (id) => {
         setIsHovered(id)
     }
-    console.log(isHovered)
+  
+    
 
     return (
         <div className='h-97 shadow-2xl banner-bg  mt-16'>
@@ -41,8 +38,8 @@ const ProductPageCard = ({ product }) => {
                         </div>
                         </div>
                     }
-                 
-                    <CardDetail description={description} price={price}></CardDetail>
+                 {/* card details section component */}
+                    <CardDetail description={description} price={price} rating={rating}></CardDetail>
                     
 
                 </div>

@@ -97,6 +97,31 @@
           "question": "Do you ship internationally?",
           "answer": "Yes, we offer international shipping to many countries. During checkout, you can select your country to view available shipping options and rates."
         }
-      ]
+      ],
+      "PrivacyPolicy": {
+    "Introduction": "Welcome to Shopmart. At Shopmart, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and share your personal data when you use our services. By accessing or using Shopmart, you agree to the practices described in this policy.",
+    "InformationWeCollect": {
+      "PersonalInformation": "We may collect your name, email address, phone number, and other identifying information.",
+      "PaymentInformation": "When you make a purchase, we may collect payment information, such as credit card details.",
+      "UsageData": "We collect data on how you interact with our website, including your IP address, device information, and browser type."
+    },
+    "HowWeUseYourInformation": {
+      "FulfillmentOfOrders": "We use your data to process and deliver your orders.",
+      "Communication": "We may use your contact information to send order updates and promotional materials.",
+      "Analytics": "We collect data for analytics and to improve our services."
+    },
+    "InformationSharing": "We may share your information with third-party service providers for purposes such as order fulfillment and payment processing.",
+    "YourChoices": "You can manage your data preferences by accessing your account settings.",
+    "Security": "We employ industry-standard security measures to protect your data."
+  },
+  "TermsOfService": {
+    "AccountCreation": "You may need to create an account to use certain features. You are responsible for maintaining the confidentiality of your account credentials.",
+    "PurchasesAndPayments": "You agree to pay for any products or services you purchase from Shopmart.",
+    "ProductAvailability": "Product availability and pricing are subject to change without notice.",
+    "ReturnsAndRefunds": "Our return and refund policy is outlined separately.",
+    "Termination": "We reserve the right to terminate or suspend your account for violations of our terms.",
+    "ChangesToTerms": "We may update these terms at any time.",
+    "DisputeResolution": "Any disputes will be resolved according to our dispute resolution policy."
+  }
       
 }

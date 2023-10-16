@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FaAngleDown, FaAngleRight, FaAngleUp, FaBars, FaBlackTie, FaChair, FaGamepad, FaTablet } from 'react-icons/fa';
 
 const SideBar = () => {
+  // side bar items
     const categories = [
         { icon: <FaTablet />, label: 'Electronics Items' },
         { icon: <FaBlackTie />, label: 'Fashion Wear' },
@@ -11,9 +12,10 @@ const SideBar = () => {
       ];
       const [open, setOpen] = useState(false)
     return (
-        
+      // for mobile responsive
         <div className='md:w-1/2 md:overflow-y-auto md:pt-20 pt-14 bg-slate-900 md:h-screen'>
             <button onClick={() => setOpen(!open)} className='text-white md:hidden text-2xl px-4'>{open ? <FaAngleUp></FaAngleUp> : <FaAngleDown></FaAngleDown>}</button>
+            {/* side bar categories */}
        <div className={`absolute md:static bg-slate-900 z-30 ${open ? 'top-[85px]' : '-top-48'}`}>
        {categories.map((category, index) => (
         <div key={index} className={`text-white font-semibold py-3 hover:bg-black hover:bg-opacity-20 cursor-pointer px-3 flex items-center justify-between `}>
